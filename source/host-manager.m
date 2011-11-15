@@ -31,13 +31,6 @@
 
 #import <Foundation/Foundation.h>
 
-/*!
- * @function    main
- * @abstract    C main entry point
- * @param       argc    The number of command line parameters
- * @param       argv    An array of pointers to the command line parameters
- * @result      The process exit code
- */
 int main( void )
 {
     NSAutoreleasePool * pool;
