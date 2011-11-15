@@ -42,7 +42,7 @@ int main( void )
 {
     NSAutoreleasePool * pool;
     
-    pool  = [ NSAutoreleasePool new ];
+    pool = [ NSAutoreleasePool new ];
     
     [ pool release ];
     
