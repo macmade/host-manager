@@ -5,7 +5,7 @@ Copyright (c) 2011 eosgarden - Jean-David Gadina <macmade@eosgarden.com>
 
 **A command-line utility to manage the /etc/hosts file.**
 
-    Usage: ./build/bin/host-manager COMMAND [ARGUMENTS]
+    Usage: host-manager COMMAND [ARGUMENTS]
 
 Available commands:
 -------------------
