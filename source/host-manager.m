@@ -30,12 +30,152 @@
 /* $Id$ */
 
 #import <Foundation/Foundation.h>
+#import "HostFile.h"
+#import "HostFileEntry.h"
 
-int main( void )
+#define __VERSION   "1.0"
+
+typedef enum
+{
+    HostManagerCommandVersion   = 0x00,
+    HostManagerCommandHelp      = 0x01,
+    HostManagerCommandAdd       = 0x02,
+    HostManagerCommandRemove    = 0x03
+}
+HostManagerCommand;
+
+typedef struct _CLIArguments
+{
+    HostManagerCommand command;
+    const char       * host;
+    const char       * address;
+}
+CLIArguments;
+
+static void __getCLIArguments( int argc, const char ** argv, CLIArguments * args );
+static void __getCLIArguments( int argc, const char ** argv, CLIArguments * args )
+{
+    args->command = HostManagerCommandHelp;
+    args->host    = NULL;
+    args->address = NULL;
+    
+    if( argc < 2 )
+    {}
+    else if( strcmp( argv[ 1 ], "--help" ) == 0 || strcmp( argv[ 1 ], "-h" ) == 0 )
+    {}
+    else if( strcmp( argv[ 1 ], "--version" ) == 0 || strcmp( argv[ 1 ], "-v" ) == 0 )
+    {
+        args->command = HostManagerCommandVersion;
+    }
+    else if( strcmp( argv[ 1 ], "--add" ) == 0 || strcmp( argv[ 1 ], "-a" ) == 0 )
+    {
+        if( argc < 4 )
+        {
+            return;
+        }
+        
+        args->command = HostManagerCommandAdd;
+        args->host    = argv[ 2 ];
+        args->address = argv[ 3 ];
+    }
+    else if( strcmp( argv[ 1 ], "--remove" ) == 0 || strcmp( argv[ 1 ], "-r" ) == 0 )
+    {
+        if( argc < 3 )
+        {
+            return;
+        }
+        
+        args->command = HostManagerCommandRemove;
+        args->host    = argv[ 2 ];
+    }
+}
+
+int main( int argc, char * argv[] )
 {
     NSAutoreleasePool * pool;
+    CLIArguments        args;
+    HostFile          * hosts;
+    NSString          * host;
+    NSString          * address;
+    HostFileEntry     * entry;
     
     pool = [ NSAutoreleasePool new ];
+    
+    if( getuid() != 0 )
+    {
+        printf( "Please execute this program as root.\n" );
+        
+        return EXIT_FAILURE;
+    }
+    
+    __getCLIArguments( argc, ( const char ** )argv, &args );
+    
+    if( args.command == HostManagerCommandHelp )
+    {
+        printf
+        (
+            "\n"
+            "host-manager - version %s\n"
+            "Copyright (c) 2011 eosgarden - Jean-David Gadina <macmade@eosgarden.com>\n"
+            "\n"
+            "A command-line utility to manage the /etc/hosts file.\n"
+            "\n"
+            "Usage: %s COMMAND [ARGUMENTS]\n"
+            "\n"
+            "Available commands:\n"
+            "\n"
+            "    -h / --help        Print the help dialog.\n"
+            "    -v / --version     Print the version number.\n"
+            "    -a / --add         Add an entry to the /etc/hosts file.\n"
+            "    -r / --remove      Remove an entry from the /etc/hosts file.\n"
+            "\n"
+            "Adding an entry to the /etc/hosts file:\n"
+            "\n"
+            "    host-manager -add host address\n"
+            "\n"
+            "Removing an entry from the /etc/hosts file:\n"
+            "\n"
+            "    host-manager -remove host\n"
+            "\n"
+            "Examples:\n"
+            "\n"
+            "    host-manager -add www.example.org 127.0.0.1\n"
+            "    host-manager -remove www.example.org\n"
+            "\n",
+            __VERSION,
+            argv[ 0 ]
+         );
+    }
+    else if( args.command == HostManagerCommandVersion )
+    {
+        printf
+        (
+            "host-manager - version %s\n"
+            "Copyright (c) 2011 eosgarden - Jean-David Gadina <macmade@eosgarden.com\n",
+            __VERSION
+        );
+    }
+    else
+    {
+        hosts = [ HostFile sharedInstance ];
+        
+        if( args.command == HostManagerCommandAdd )
+        {
+            host    = [ NSString stringWithCString: args.host    encoding: NSUTF8StringEncoding ];
+            address = [ NSString stringWithCString: args.address encoding: NSUTF8StringEncoding ];
+            entry   = [ HostFileEntry entryWithAddress: address host: host ];
+            
+            [ hosts writeNewEntry: entry ];
+        }
+        else if( args.command == HostManagerCommandRemove )
+        {
+            host    = [ NSString stringWithCString: args.host    encoding: NSUTF8StringEncoding ];
+            address = nil;
+            entry   = [ HostFileEntry entryWithAddress: address host: host ];
+            
+            [ hosts removeEntry: entry ];
+        }
+    }
     
     [ pool release ];
     
