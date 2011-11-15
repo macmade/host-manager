@@ -6,11 +6,80 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXFileReference section */
+		05EA7D611472FABA0087238B /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		05EA7D621472FABA0087238B /* makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; };
+		05EA7D641472FABA0087238B /* C++.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "C++.mk"; sourceTree = "<group>"; };
+		05EA7D651472FABA0087238B /* C.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = C.mk; sourceTree = "<group>"; };
+		05EA7D661472FABA0087238B /* Objective-C.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Objective-C.mk"; sourceTree = "<group>"; };
+		05EA7D671472FABA0087238B /* makefile-config.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "makefile-config.mk"; sourceTree = "<group>"; };
+		05EA7D691472FABA0087238B /* en.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = en.mk; sourceTree = "<group>"; };
+		05EA7D6A1472FABA0087238B /* fr.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fr.mk; sourceTree = "<group>"; };
+		05EA7D6C1472FABA0087238B /* host-manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "host-manager.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		0536376E1472F99E00EAE7B5 = {
 			isa = PBXGroup;
 			children = (
+				05EA7D611472FABA0087238B /* LICENSE.txt */,
+				05EA7D621472FABA0087238B /* makefile */,
+				05EA7D631472FABA0087238B /* makefile-code */,
+				05EA7D671472FABA0087238B /* makefile-config.mk */,
+				05EA7D681472FABA0087238B /* makefile-lang */,
+				05EA7D6B1472FABA0087238B /* source */,
 			);
+			sourceTree = "<group>";
+		};
+		05EA7D631472FABA0087238B /* makefile-code */ = {
+			isa = PBXGroup;
+			children = (
+				05EA7D641472FABA0087238B /* C++.mk */,
+				05EA7D651472FABA0087238B /* C.mk */,
+				05EA7D661472FABA0087238B /* Objective-C.mk */,
+			);
+			path = "makefile-code";
+			sourceTree = "<group>";
+		};
+		05EA7D681472FABA0087238B /* makefile-lang */ = {
+			isa = PBXGroup;
+			children = (
+				05EA7D691472FABA0087238B /* en.mk */,
+				05EA7D6A1472FABA0087238B /* fr.mk */,
+			);
+			path = "makefile-lang";
+			sourceTree = "<group>";
+		};
+		05EA7D6B1472FABA0087238B /* source */ = {
+			isa = PBXGroup;
+			children = (
+				05EA7D6C1472FABA0087238B /* host-manager.m */,
+				05EA7D6D1472FABA0087238B /* include */,
+				05EA7D6E1472FABA0087238B /* lib */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		05EA7D6D1472FABA0087238B /* include */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		05EA7D6E1472FABA0087238B /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				05EA7D6F1472FABA0087238B /* include */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		05EA7D6F1472FABA0087238B /* include */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = include;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +209,7 @@
 				0536377A1472F99E00EAE7B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
