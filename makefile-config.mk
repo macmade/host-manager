@@ -69,7 +69,7 @@ EXEC                = host-manager
 # Dependancies for the executables (objects)
 #-------------------------------------------------------------------------------
 
-DEPS_host-manager   = 
+DEPS_host-manager   = HostFile HostFileEntry
 
 #-------------------------------------------------------------------------------
 # Dependancies for the executables (libraries)
