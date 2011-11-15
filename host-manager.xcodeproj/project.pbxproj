@@ -20,12 +20,14 @@
 		05EA7D791472FD300087238B /* HostFileEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostFileEntry.m; sourceTree = "<group>"; };
 		05EA7D7B1472FD3D0087238B /* HostFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostFile.h; sourceTree = "<group>"; };
 		05EA7D7C1472FD3D0087238B /* HostFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostFile.m; sourceTree = "<group>"; };
+		05EA7D8114730BEE0087238B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		0536376E1472F99E00EAE7B5 = {
 			isa = PBXGroup;
 			children = (
+				05EA7D8114730BEE0087238B /* README.md */,
 				05EA7D611472FABA0087238B /* LICENSE.txt */,
 				05EA7D621472FABA0087238B /* makefile */,
 				05EA7D631472FABA0087238B /* makefile-code */,
