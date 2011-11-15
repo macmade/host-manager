@@ -16,6 +16,10 @@
 		05EA7D691472FABA0087238B /* en.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = en.mk; sourceTree = "<group>"; };
 		05EA7D6A1472FABA0087238B /* fr.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fr.mk; sourceTree = "<group>"; };
 		05EA7D6C1472FABA0087238B /* host-manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "host-manager.m"; sourceTree = "<group>"; };
+		05EA7D781472FD300087238B /* HostFileEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostFileEntry.h; sourceTree = "<group>"; };
+		05EA7D791472FD300087238B /* HostFileEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostFileEntry.m; sourceTree = "<group>"; };
+		05EA7D7B1472FD3D0087238B /* HostFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostFile.h; sourceTree = "<group>"; };
+		05EA7D7C1472FD3D0087238B /* HostFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostFile.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -54,6 +58,10 @@
 			isa = PBXGroup;
 			children = (
 				05EA7D6C1472FABA0087238B /* host-manager.m */,
+				05EA7D781472FD300087238B /* HostFileEntry.h */,
+				05EA7D791472FD300087238B /* HostFileEntry.m */,
+				05EA7D7B1472FD3D0087238B /* HostFile.h */,
+				05EA7D7C1472FD3D0087238B /* HostFile.m */,
 				05EA7D6D1472FABA0087238B /* include */,
 				05EA7D6E1472FABA0087238B /* lib */,
 			);
