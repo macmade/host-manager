@@ -195,7 +195,7 @@ static HostFile * __sharedInstance = nil;
         return;
     }
     
-    file = [ file stringByAppendingFormat: @"\n%@\t%@ # Managed by WebStart", entry.address, entry.host ];
+    file = [ file stringByAppendingFormat: @"\n%@\t%@", entry.address, entry.host ];
     
     [ file writeToFile: @"/etc/hosts" atomically: YES encoding: NSUTF8StringEncoding error: &error ];
     
