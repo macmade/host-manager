@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2011, Jean-David Gadina <macmade@eosgarden.com>
+ * Copyright (c) 2011, Jean-David Gadina - www.xs-labs.com
  * Distributed under the Boost Software License, Version 1.0.
  * 
  * Boost Software License - Version 1.0 - August 17th, 2003
@@ -116,7 +116,7 @@ int main( int argc, char * argv[] )
         (
             "\n"
             "host-manager - version %s\n"
-            "Copyright (c) 2011 eosgarden - Jean-David Gadina <macmade@eosgarden.com>\n"
+            "Copyright (c) 2011 - Jean-David Gadina - www.xs-labs.com\n"
             "\n"
             "A command-line utility to manage the /etc/hosts file.\n"
             "\n"
@@ -151,7 +151,7 @@ int main( int argc, char * argv[] )
         printf
         (
             "host-manager - version %s\n"
-            "Copyright (c) 2011 eosgarden - Jean-David Gadina <macmade@eosgarden.com\n",
+            "Copyright (c) 2011 - Jean-David Gadina - www.xs-labs.com\n",
             __VERSION
         );
     }

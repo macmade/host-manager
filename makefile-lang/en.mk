@@ -1,6 +1,6 @@
 # ------------------------------------------------------------------------------
 # 
-# Copyright (c) 2010, Jean-David Gadina <macmade@eosgarden.com>
+# Copyright (c) 2010, Jean-David Gadina - www.xs-labs.com
 # All rights reserved.
 # 
 # Redistribution and use in source and binary forms, with or without
@@ -42,10 +42,6 @@
 # Please note that you need at least version 3.81 of GNU Make to use this file.
 # Older versions are not supported and will never be.
 # 
-# You also need a copy of the GNU Libtool in order to handle the shared objects.
-# GNU Libtool is sometimes called glibtool, or simply libtool.
-# Others implementations of Libtool are not supported at the time.
-# 
 # ------------------------------------------------------------------------------
 
 # $Id$
@@ -54,12 +50,8 @@
 LANG_HASLABELS           := 1
 
 # Language labels
-LANG_MAKESTART           := Beginning make script
-LANG_MAKEVERSION_NEEDED  := Version of GNU Make needed: _VERSION_
-LANG_MAKEVERSION_CURRENT := Current version of GNU Make: _VERSION_
+LANG_MAKESTART           := Beginning make script - GNU Make _VERSION_
 LANG_MAKEEND             := End of the make script
-LANG_THANX               := Thanx for using this makefile
-LANG_GOODBYE             := Have a nice day
 LANG_DONE                := Done
 LANG_LIB_START           := Finding and building the libraries
 LANG_LIB_END             := All libraries were processed
@@ -75,6 +67,8 @@ LANG_O_BUILD             := Building the object file for _CFILE_ in _DIR_BUILD_
 LANG_LO_BUILD            := Building the library object file for _CFILE_ in _DIR_BUILD_
 LANG_LA_BUILD            := Building the library archive file for _TNAME_ in _DIR_BUILD_
 LANG_DEPS_FIND           := Finding dependancies for _TFILE_
+LANG_DEPS_LIB_FIND       := Finding local library dependancies for _TFILE_
+LANG_DEPS_SYSLIB_FIND    := Finding system dependancies for _TFILE_
 LANG_DEPS_NODEPS         := _TFILE_ does not depend on shared objects
 LANG_OUT_BUILD           := Building the output file for _CFILE_ in _DIR_BUILD_
 LANG_EXEC_BUILD_HASDEPS  := Building the executable _TFILE_ in _DIR_BUILD_ by linking _OFILE_ with its dependancies: _DEPS_

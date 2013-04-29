@@ -1,6 +1,6 @@
 # ------------------------------------------------------------------------------
 # 
-# Copyright (c) 2010, Jean-David Gadina <macmade@eosgarden.com>
+# Copyright (c) 2010, Jean-David Gadina - www.xs-labs.com
 # All rights reserved.
 # 
 # Redistribution and use in source and binary forms, with or without
@@ -42,10 +42,6 @@
 # Please note that you need at least version 3.81 of GNU Make to use this file.
 # Older versions are not supported and will never be.
 # 
-# You also need a copy of the GNU Libtool in order to handle the shared objects.
-# GNU Libtool is sometimes called glibtool, or simply libtool.
-# Others implementations of Libtool are not supported at the time.
-# 
 #-------------------------------------------------------------------------------
 
 # $Id$
@@ -54,12 +50,8 @@
 LANG_HASLABELS           := 1
 
 # Language labels
-LANG_MAKESTART           := Début du script make
-LANG_MAKEVERSION_NEEDED  := Version de GNU Make requise: _VERSION_
-LANG_MAKEVERSION_CURRENT := Version actuelle de GNU Make: _VERSION_
+LANG_MAKESTART           := Début du script make - GNU Make _VERSION_
 LANG_MAKEEND             := Fin du script make
-LANG_THANX               := Merci d\'avoir utilisé ce makefile
-LANG_GOODBYE             := Bonne journée
 LANG_DONE                := Terminé
 LANG_LIB_START           := Recherche et génération des librairies
 LANG_LIB_END             := Toutes les librairies ont été traités
@@ -75,6 +67,8 @@ LANG_O_BUILD             := Génération du fichier objet pour _CFILE_ dans _DIR
 LANG_LO_BUILD            := Génération du fichier objet de librairie pour _CFILE_ dans _DIR_BUILD_
 LANG_LA_BUILD            := Génération du fichier archive de librairie pour _TNAME_ dans _DIR_BUILD_
 LANG_DEPS_FIND           := Recherche des dépendances pour _TFILE_
+LANG_DEPS_LIB_FIND       := Finding local library dependancies for _TFILE_
+LANG_DEPS_SYSLIB_FIND    := Recherche des dépendances de librairies locales pour _TFILE_
 LANG_DEPS_NODEPS         := _TFILE_ ne dépend d\'aucun objet partagé
 LANG_OUT_BUILD           := Génération du fichier de sortie pour _CFILE_ dans _DIR_BUILD_
 LANG_EXEC_BUILD_HASDEPS  := Génération de l\'exécutable _TFILE_ dans _DIR_BUILD_ en liant _OFILE_ avec ses dépendances: _DEPS_
