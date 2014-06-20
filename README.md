@@ -1,6 +1,8 @@
 HostManager
 ===========
 
+[![Build Status](https://travis-ci.org/macmade/host-manager.svg?branch=master)](https://travis-ci.org/macmade/host-manager)
+
 About
 -----
 
