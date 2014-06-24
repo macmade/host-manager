@@ -1,7 +1,7 @@
 HostManager
 ===========
 
-[![Build Status](https://travis-ci.org/macmade/host-manager.svg?branch=master)](https://travis-ci.org/macmade/host-manager)
+[![Build Status](https://img.shields.io/travis/macmade/host-manager.svg?branch=master&style=flat)](https://travis-ci.org/macmade/host-manager)
 
 About
 -----
